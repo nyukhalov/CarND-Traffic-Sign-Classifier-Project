@@ -6,9 +6,13 @@ git pull
 echo
 
 # Ask the user for login details
-read -p 'Git repository url: ' upstreamVar
-read -p 'Git Username: ' userVar
-read -p 'Git email: ' emailVar
+#read -p 'Git repository url: ' upstreamVar
+#read -p 'Git Username: ' userVar
+#read -p 'Git email: ' emailVar
+
+upstreamVar=https://github.com/nyukhalov/CarND-Traffic-Sign-Classifier-Project.git
+userVar=nyukhalov
+emailVar=r.nyukhalov@gmail.com
 
 echo
 echo Thank you $userVar!, we now have your credentials
