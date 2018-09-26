@@ -1,0 +1,83 @@
+Training...
+
+EPOCH 1 ...
+Training Accuracy = 0.128
+Validation Accuracy = 0.109
+
+EPOCH 2 ...
+Training Accuracy = 0.242
+Validation Accuracy = 0.246
+
+EPOCH 3 ...
+Training Accuracy = 0.339
+Validation Accuracy = 0.364
+
+EPOCH 4 ...
+Training Accuracy = 0.409
+Validation Accuracy = 0.419
+
+EPOCH 5 ...
+Training Accuracy = 0.470
+Validation Accuracy = 0.476
+
+EPOCH 6 ...
+Training Accuracy = 0.514
+Validation Accuracy = 0.524
+
+EPOCH 7 ...
+Training Accuracy = 0.553
+Validation Accuracy = 0.562
+
+EPOCH 8 ...
+Training Accuracy = 0.585
+Validation Accuracy = 0.594
+
+EPOCH 9 ...
+Training Accuracy = 0.610
+Validation Accuracy = 0.617
+
+EPOCH 10 ...
+Training Accuracy = 0.633
+Validation Accuracy = 0.637
+
+EPOCH 11 ...
+Training Accuracy = 0.652
+Validation Accuracy = 0.666
+
+EPOCH 12 ...
+Training Accuracy = 0.670
+Validation Accuracy = 0.685
+
+EPOCH 13 ...
+Training Accuracy = 0.684
+Validation Accuracy = 0.690
+
+EPOCH 14 ...
+Training Accuracy = 0.699
+Validation Accuracy = 0.704
+
+EPOCH 15 ...
+Training Accuracy = 0.713
+Validation Accuracy = 0.725
+
+EPOCH 16 ...
+Training Accuracy = 0.722
+Validation Accuracy = 0.725
+
+EPOCH 17 ...
+Training Accuracy = 0.735
+Validation Accuracy = 0.751
+
+EPOCH 18 ...
+Training Accuracy = 0.745
+Validation Accuracy = 0.754
+
+EPOCH 19 ...
+Training Accuracy = 0.755
+Validation Accuracy = 0.771
+
+EPOCH 20 ...
+Training Accuracy = 0.762
+Validation Accuracy = 0.767
+
+Model saved
