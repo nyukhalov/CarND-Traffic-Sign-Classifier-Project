@@ -31,7 +31,8 @@ The goals / steps of this project are the following:
 [img_bl_after]: ./images/image_blur_after.jpg "Blur: After"
 [img_pers_before]: ./images/image_pers_before.jpg "Pers. Transformation: Before"
 [img_pers_after]: ./images/image_pers_after.jpg "Pers. Transformation: After"
-
+[img_aug_before]: ./images/image_aug_before.jpg "Augment: Before"
+[img_aug_after]: ./images/image_aug_after.jpg "Augment: After"
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -100,7 +101,7 @@ The main reason why I decided to generate additional data was the fact that the 
 
 To add more data to the the data set, I used the following techniques:
 
-- Random transition on -2..2 pixels along x- and y-axis
+- Random transition on -2..2 pixels along the x- and y-axis
 
   ![text][img_tr_before]![text][img_tr_after]
 
@@ -112,7 +113,7 @@ To add more data to the the data set, I used the following techniques:
 
   ![text][img_sc_before]![text][img_sc_after]
 
-- Blurring with a random kernel size equal 1 or 3
+- Blurring with a random kernel size of 1 or 3
 
   ![text][img_bl_before]![text][img_bl_after]
 
@@ -120,12 +121,16 @@ To add more data to the the data set, I used the following techniques:
 
   ![text][img_pers_before]![text][img_pers_after]
 
-Here is an example of an original image and an augmented image:
+The method `def augment(img)` applied from 3 to 5 randomly selected transformations described above to the image passed in.
 
-![alt text][image3]
+Here is an example of an original image and a result of the `augment` method:
 
-The difference between the original data set and the augmented data set is the following ...
+![text][img_aug_before]![text][img_aug_after]
 
+The difference between the original data set and the augmented data set is the following:
+
+- The augmented data set has the same number of samples of each class.
+- The augmented data set consists of 430,000 images (10,000 images per class) which is more than 12 times more than the original data set size.
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
