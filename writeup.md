@@ -130,24 +130,30 @@ Here is an example of an original image and a result of the `augment` method:
 The difference between the original data set and the augmented data set is the following:
 
 - The augmented data set has the same number of samples of each class.
-- The augmented data set consists of 430,000 images (10,000 images per class) which is more than 12 times more than the original data set size.
+- The augmented data set consists of 430,000 images (10,000 images per class) which is 12 times more than the original data set size.
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					|
-|:---------------------:|:---------------------------------------------:|
-| Input         		| 32x32x3 RGB image   							|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
-
+|:-----------------:|:-------------------------------------------:|
+| Input         		| 32x32x1 Grayscale                           |
+| Convolution 5x5   | 1x1 stride, valid padding, outputs 28x28x6  |
+| RELU					|						                          |
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6                |
+| Convolution 5x5	| 1x1 stride, valid padding, outputs 10x10x16 |
+| RELU					|						                          |
+| Max pooling	      	| 2x2 stride,  outputs 5x5x16                 |
+| Flatten				| outputs 1x400                               |
+| Fully connected	| outputs 1x1024                              |
+| RELU					|						                          |
+| Dropout				| 50% dropout	                                 |
+| Fully connected	| outputs 1x512                               |
+| RELU					|						                          |
+| Dropout				| 50% dropout	                                 |
+| Fully connected	| outputs 1x43                                |
+| Softmax				|                                             |
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
