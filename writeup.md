@@ -21,6 +21,17 @@ The goals / steps of this project are the following:
 [vis_test]: ./images/visualization_test.jpg "Test Set Visualization"
 [img_rgb]: ./images/image_rgb.jpg "RGB image"
 [img_gray]: ./images/image_gray.jpg "RGB image"
+[img_tr_before]: ./images/image_translate_before.jpg "Translate: Before"
+[img_tr_after]: ./images/image_translate_after.jpg "Translate: After"
+[img_rot_before]: ./images/image_rotate_before.jpg "Rotate: Before"
+[img_rot_after]: ./images/image_rotate_after.jpg "Rotate: After"
+[img_sc_before]: ./images/image_scale_before.jpg "Scale: Before"
+[img_sc_after]: ./images/image_scale_after.jpg "Scale: After"
+[img_bl_before]: ./images/image_blur_before.jpg "Blur: Before"
+[img_bl_after]: ./images/image_blur_after.jpg "Blur: After"
+[img_pers_before]: ./images/image_pers_before.jpg "Pers. Transformation: Before"
+[img_pers_after]: ./images/image_pers_after.jpg "Pers. Transformation: After"
+
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -85,9 +96,29 @@ As the last step, I normalized the image data because it helps to prevent numeri
 
 **Data augmentation**
 
-I decided to generate additional data because ...
+The main reason why I decided to generate additional data was the fact that the number of samples of each label in the training set is significantly different. For example, there're 180 samples for the class 0 and 2010 samples for the class 2. I wanted training set to has approximatelly the same number of samples for each class. Also, as a car moves, some images can be sligtly blurred and/or viewed by the car's camera from different angles. I wanted the NN to be able to work well under such conditions.
 
-To add more data to the the data set, I used the following techniques because ...
+To add more data to the the data set, I used the following techniques:
+
+- Random transition on -2..2 pixels along x- and y-axis
+
+  ![text][img_tr_before]![text][img_tr_after]
+
+- Random rotation in -10..10 degrees
+
+  ![text][img_rot_before]![text][img_rot_after]
+
+- Scaling by a random factor of 1..1.2
+
+  ![text][img_sc_before]![text][img_sc_after]
+
+- Blurring with a random kernel size equal 1 or 3
+
+  ![text][img_bl_before]![text][img_bl_after]
+
+- Random perspective tranformation
+
+  ![text][img_pers_before]![text][img_pers_after]
 
 Here is an example of an original image and an augmented image:
 
