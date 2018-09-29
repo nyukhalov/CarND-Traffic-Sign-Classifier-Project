@@ -19,6 +19,8 @@ The goals / steps of this project are the following:
 [vis_train]: ./images/visualization_train.jpg "Training Set Visualization"
 [vis_valid]: ./images/visualization_valid.jpg "Validation Set Visualization"
 [vis_test]: ./images/visualization_test.jpg "Test Set Visualization"
+[img_rgb]: ./images/image_rgb.jpb "RGB image"
+[img_gray]: ./images/image_gray.jpb "RGB image"
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -71,13 +73,17 @@ Test set:
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+**Data pre-processing pipeline**
+
+As the first step, I decided to convert the images to grayscale because after several experiments I found out that color information does not really help the NN to train. The NN using graycale images gave better validation accuracy.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![text][img_rgb]![text][img_gray]
 
-As a last step, I normalized the image data because ...
+As the last step, I normalized the image data because it helps to prevent numerical issues in calculating a loss function, and helps a NN to train faster.
+
+**Data augmentation**
 
 I decided to generate additional data because ...
 
