@@ -34,14 +34,6 @@ The goals / steps of this project are the following:
 [img_aug_before]: ./images/image_aug_before.jpg "Augment: Before"
 [img_aug_after]: ./images/image_aug_after.jpg "Augment: After"
 [web_test_set]: ./images/web_test_set.jpg "Web Test Set"
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -101,7 +93,7 @@ As the last step, I normalized the image data because it helps to prevent numeri
 
 **Data augmentation**
 
-The main reason why I decided to generate additional data was the fact that the number of samples of each label in the training set is significantly different. For example, there're 180 samples for the class 0 and 2010 samples for the class 2. I wanted the training set to has approximatelly the same number of samples of each class. Also, as a car moves, some images can be sligtly blurred and/or viewed by the car's camera from different angles. I wanted the NN to be able to work well under such conditions.
+The main reason why I decided to generate additional data was the fact that the number of samples of each label in the training set is significantly different. For example, there're 180 samples for the class 0 and 2010 samples for the class 2. I wanted the training set to has approximately the same number of samples of each class. Also, as a car moves, some images can be slightly blurred and/or viewed by the car's camera from different angles. I wanted the NN to be able to work well under such conditions.
 
 To add more data to the the data set, I used the following techniques:
 
@@ -121,13 +113,13 @@ To add more data to the the data set, I used the following techniques:
 
   ![text][img_bl_before]![text][img_bl_after]
 
-- Random perspective tranformation
+- Random perspective transformation
 
   ![text][img_pers_before]![text][img_pers_after]
 
-The method `def augment(img)` applied from 3 to 5 randomly selected transformations described above to the image passed in.
+The method `def augment(img)` applies from 3 to 5 randomly selected transformations described above to the image passed in.
 
-Here is an example of an original image and a result of the `augment` method:
+Here is an example of an original image and an output of the `augment` method:
 
 ![text][img_aug_before]![text][img_aug_after]
 
@@ -177,16 +169,16 @@ My final model results were:
 * validation set accuracy of 0.979
 * test set accuracy of 0.962
 
-To be able to achieve the result above I ran prenty experiment. The most important steps and desicions are lister below:
+To be able to achieve the result above I ran plenty experiments. The most important steps and decisions are lister below:
 
 - As the first architecture I chose LeNet 5 shown in the classroom as it was suggested in the project's description.
-- The biggest problem of this arhitecture was overfitting: the training set accuracy was 1.00 while the validation accuracy was under 0.93.
+- The biggest problem of this architecture was overfitting: the training set accuracy was 1.00 while the validation accuracy was under 0.93.
 - In order to prevent overfitting I've added dropout layers after the first and second fully connected layers. Experiments showed that a dropout rate of 25% is not enough and the rate of 50% works much better.
-- After the step above I could acheive the desired validation set accuracy > 0.93, but I wanted to acheive at least 0.95 accuracy. After several experiments with the width of the fully connected layers I decided to set it as the following:
+- After the step above I could achieve the desired validation set accuracy > 0.93, but I wanted to achieve at least 0.95 accuracy. After several experiments with the width of the fully connected layers I decided to set it as the following:
 	- the width of the first fully connected of 1024
 	- the width of the seconds fully connected of 512
-- The batch size of 256 was choosen after a series of experiments with different sizes (64, 128, 256) as the best performing.
-- I also ran several experiments for choosing the learning rate. The rate of 0.001 gave the best validation accuracy. However, using a contant learning rate value resulted in jiterring of the validation accuracy in the end of training. To solve this issue I decided to decrease the learning rate dynamically, deviding it by 2 every 10 epochs.
+- The batch size of 256 was chosen after a series of experiments with different sizes (64, 128, 256) as the best performing.
+- I also ran several experiments for choosing the learning rate. The rate of 0.001 gave the best validation accuracy. However, using a constant learning rate value resulted in jittering of the validation accuracy in the end of training. To solve this issue I decided to decrease the learning rate dynamically, dividing it by 2 every 10 epochs.
 
 
 ### Test a Model on New Images
