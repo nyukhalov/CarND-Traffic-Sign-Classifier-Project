@@ -211,25 +211,59 @@ Here are the results of the prediction:
 | Stop	      				| Stop				|
 | Speed limit (50km/h) | Speed limit (50km/h) |
 
-
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 96.2%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+For the first image, the model is absolutely sure that this is a "keep right" sign (probability of 1.0), and the image does contain a "keep right". The top five soft max probabilities were
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+| Probability  |     Prediction	    |
+|:------------:|:-------------------:|
+| 1.0 		 	 | Keep right       	|
+| 0.0     	 | Speed limit (20km/h) |
+| 0.0			 | Speed limit (30km/h) |
+| 0.0	     	 | Speed limit (50km/h) |
+| 0.0		 	 | Speed limit (60km/h) |
 
-| Probability         	|     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-| .60         			| Stop sign   									|
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+For the second image, the model is relatively sure that this is a "Speed limit (30km/h)" sign (probability of 0.973), and the image does contain a "Speed limit (30km/h)" sign. The top five soft max probabilities were
 
+| Probability.      |     Prediction	    |
+|:-----------------:|:-------------------:|
+| 9.7316957e-01 		| Speed limit (30km/h) |
+| 2.6274802e-02 		| Speed limit (20km/h) |
+| 3.4359802e-04		| Children crossing |
+| 1.4032122e-04	   	| Road work |
+| 7.0213719e-05		| Right-of-way at the next intersection |
 
-For the second image ...
+For the third image, the model is absolutely sure that this is a "Priority road" sign (probability of 1.0), and the image does contain a "Priority road" sign. The top five soft max probabilities were
+
+| Probability.      |     Prediction	    |
+|:-----------------:|:-------------------:|
+| 1.000000e+00 		| Priority road       |
+| 3.730391e-30 		| Roundabout mandatory |
+| 8.071415e-31		| Stop |
+| 0.000000e+00	   	| Speed limit (20km/h) |
+| 0.000000e+00		| Speed limit (30km/h) |
+
+For the fourth image, the model is absolutely sure that this is a "Stop" sign (probability of 1.0), and the image does contain a "Stop" sign. The top five soft max probabilities were
+
+| Probability.      |     Prediction	    |
+|:-----------------:|:-------------------:|
+| 1.0000000e+00 		| Stop       |
+| 1.8616805e-14 		| Turn left ahead |
+| 1.3855617e-14		| Go straight or right |
+| 7.1690952e-16	   	| Keep right |
+| 2.1260214e-17		| Yield |
+
+For the fifth image, the model is relatively sure that this is a "Speed limit (50km/h)" sign (probability of 0.56), and the image does contain a "Speed limit (50km/h)" sign. The top five soft max probabilities were
+
+| Probability.      |     Prediction	    |
+|:-----------------:|:-------------------:|
+| 0.56035084 		| Speed limit (50km/h)       |
+| 0.38740516 		| No passing for vehicles over 3.5 metric tons |
+| 0.03605079		| Speed limit (60km/h) |
+| 0.00837479	   	| Speed limit (80km/h) |
+| 0.00780723		| No passing |
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
