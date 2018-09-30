@@ -97,7 +97,7 @@ As the last step, I normalized the image data because it helps to prevent numeri
 
 **Data augmentation**
 
-The main reason why I decided to generate additional data was the fact that the number of samples of each label in the training set is significantly different. For example, there're 180 samples for the class 0 and 2010 samples for the class 2. I wanted training set to has approximatelly the same number of samples for each class. Also, as a car moves, some images can be sligtly blurred and/or viewed by the car's camera from different angles. I wanted the NN to be able to work well under such conditions.
+The main reason why I decided to generate additional data was the fact that the number of samples of each label in the training set is significantly different. For example, there're 180 samples for the class 0 and 2010 samples for the class 2. I wanted the training set to has approximatelly the same number of samples of each class. Also, as a car moves, some images can be sligtly blurred and/or viewed by the car's camera from different angles. I wanted the NN to be able to work well under such conditions.
 
 To add more data to the the data set, I used the following techniques:
 
@@ -160,29 +160,29 @@ My final model consisted of the following layers:
 
 To train the model, I used the Adam optimizer with the following hyper-parameters:
 
-- The number of epochs is 50
-- The batch size is 256
-- The dropout rate is 50%
-- Learning rate is 0.001, decreasing every 10 epochs by the factor of 2.
+- The number of epochs of 50
+- The batch size of 256
+- The dropout rate of 50%
+- Learning rate of 0.001 decreasing every 10 epochs by the factor of 2.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ?
-* test set accuracy of ?
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+* training set accuracy of 1.000
+* validation set accuracy of 0.979
+* test set accuracy of 0.962
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+To be able to achieve the result above I ran prenty experiment. The most important steps and desicions are lister below:
+
+- As the first architecture I chose LeNet 5 shown in the classroom as it was suggested in the project's description.
+- The biggest problem of this arhitecture was overfitting: the training set accuracy was 1.00 while the validation accuracy was under 0.93.
+- In order to prevent overfitting I've added dropout layers after the first and second fully connected layers. Experiments showed that a dropout rate of 25% is not enough and the rate of 50% works much better.
+- After the step above I could acheive the desired validation set accuracy > 0.93, but I wanted to acheive at least 0.95 accuracy. After several experiments with the width of the fully connected layers I decided to set it as the following:
+	- the width of the first fully connected of 1024
+	- the width of the seconds fully connected of 512
+- The batch size of 256 was choosen after a series of experiments with different sizes (64, 128, 256) as the best performing.
+- I also ran several experiments for choosing the learning rate. The rate of 0.001 gave the best validation accuracy. However, using a contant learning rate value resulted in jiterring of the validation accuracy in the end of training. To solve this issue I decided to decrease the learning rate dynamically, deviding it by 2 every 10 epochs.
 
 
 ### Test a Model on New Images
