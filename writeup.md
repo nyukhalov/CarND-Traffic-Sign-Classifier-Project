@@ -33,6 +33,7 @@ The goals / steps of this project are the following:
 [img_pers_after]: ./images/image_pers_after.jpg "Pers. Transformation: After"
 [img_aug_before]: ./images/image_aug_before.jpg "Augment: Before"
 [img_aug_after]: ./images/image_aug_after.jpg "Augment: After"
+[web_test_set]: ./images/web_test_set.jpg "Web Test Set"
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -50,7 +51,10 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/nyukhalov/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here are links to my
+
+- [project code](https://github.com/nyukhalov/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+- [exported to HTML notebook](https://github.com/nyukhalov/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html)
 
 ### Data Set Summary & Exploration
 
@@ -191,10 +195,9 @@ To be able to achieve the result above I ran prenty experiment. The most importa
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6]
-![alt text][image7] ![alt text][image8]
+![text][web_test_set]
 
-The first image might be difficult to classify because ...
+The seconds, fourth and fifth images might be difficult to classify because they are "perspective-transformed". The third image can also be challenging to classify as it contains a contrast object in the bottom right corner.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -202,14 +205,14 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| Stop Sign      		| Stop sign   									|
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Keep right      		| Keep right |
+| Speed limit (30km/h) | Speed limit (30km/h) |
+| Priority road			| Priority road |
+| Stop	      				| Stop				|
+| Speed limit (50km/h) | Speed limit (50km/h) |
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 96.2%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
