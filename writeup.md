@@ -264,6 +264,3 @@ For the fifth image, the model is relatively sure that this is a "Speed limit (5
 | 0.03605079		| Speed limit (60km/h) |
 | 0.00837479	   	| Speed limit (80km/h) |
 | 0.00780723		| No passing |
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
