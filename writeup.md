@@ -169,7 +169,7 @@ My final model results were:
 * validation set accuracy of 0.979
 * test set accuracy of 0.962
 
-To be able to achieve the result above I ran plenty experiments. The most important steps and decisions are lister below:
+To be able to achieve the result above I ran plenty experiments. The most important steps and decisions are listed below:
 
 - As the first architecture I chose LeNet 5 shown in the classroom as it was suggested in the project's description.
 - The biggest problem of this architecture was overfitting: the training set accuracy was 1.00 while the validation accuracy was under 0.93.
