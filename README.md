@@ -1,10 +1,18 @@
-# Project: Build a Traffic Sign Recognition Program
+# Project: Traffic Sign Recognition Program
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 # Overview
 
 In this project, I used deep neural networks and convolutional neural networks to classify traffic signs. I trained and validated a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, I tried out the model on images of German traffic signs that I found on the web.
+
+# Dependencies
+
+This lab requires:
+
+* [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
+
+The lab environment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
 
 # The Project
 
@@ -245,13 +253,3 @@ For the fifth image, the model is relatively sure that this is a "Speed limit (5
 | 0.03605079		| Speed limit (60km/h) |
 | 0.00837479	   	| Speed limit (80km/h) |
 | 0.00780723		| No passing |
-
-
-# Dependencies
-
-This lab requires:
-
-* [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
-
-The lab environment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
-
